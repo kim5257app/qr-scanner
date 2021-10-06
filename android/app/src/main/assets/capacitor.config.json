@@ -1,0 +1,6 @@
+{
+	"appId": "io.kim5257.app.qrscanner",
+	"appName": "QR Scanner",
+	"webDir": "dist",
+	"bundledWebRuntime": false
+}
