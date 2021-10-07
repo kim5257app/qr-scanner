@@ -3,8 +3,25 @@
     <div
       class="cam-container">
       <qrcode-stream
+        :torch="torch"
         @decode="onDecode">
       </qrcode-stream>
+    </div>
+    <div
+      class="control-container">
+      <div
+        class="d-flex">
+        <v-spacer></v-spacer>
+        <v-btn
+          @click="torch = !torch"
+          color="accent"
+          icon>
+          <v-icon>
+            {{ (torch) ? 'mdi-flash' : 'mdi-flash-off' }}
+          </v-icon>
+        </v-btn>
+        <v-spacer></v-spacer>
+      </div>
     </div>
   </div>
 </template>
@@ -18,13 +35,16 @@ export default {
   components: {
     QrcodeStream,
   },
+  data: () => ({
+    torch: false,
+  }),
   methods: {
     ...mapMutations({
       decodeValue: 'decodeValue',
     }),
     onDecode(value) {
       this.decodeValue(value);
-      this.$router.push('/result');
+      this.$router.push('result');
     },
   },
 };
@@ -33,7 +53,14 @@ export default {
 <style lang="scss" scoped>
 .cam-container {
   margin: auto;
+  max-width: 800px;
   width: 100%;
   height: 100vh;
+}
+
+.control-container {
+  top: 1rem;
+  width: 100%;
+  position: fixed;
 }
 </style>
