@@ -942,6 +942,11 @@
   dependencies:
     tslib "^2.1.0"
 
+"@capacitor/share@^1.0.4":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@capacitor/share/-/share-1.0.4.tgz#4ef0c082aee4df0e3082e91536f7c5c791e5529f"
+  integrity sha512-hvGvjGd9ivBSac8TzUntju9SCSd2Z855ER9c7FDyHVmddWw4F5NWzHmzqjydtC3a8egNfBU1tdtBtE+bX4bqiQ==
+
 "@hapi/address@2.x.x":
   version "2.1.4"
   resolved "https://registry.yarnpkg.com/@hapi/address/-/address-2.1.4.tgz#5d67ed43f3fd41a69d4b9ff7b56e7c0d1d0a81e5"
@@ -5305,6 +5310,11 @@ is-typedarray@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/is-typedarray/-/is-typedarray-1.0.0.tgz#e479c80858df0c1b11ddda6940f96011fcda4a9a"
   integrity sha1-5HnICFjfDBsR3dppQPlgEfzaSpo=
+
+is-url@^1.2.4:
+  version "1.2.4"
+  resolved "https://registry.yarnpkg.com/is-url/-/is-url-1.2.4.tgz#04a4df46d28c4cff3d73d01ff06abeb318a1aa52"
+  integrity sha512-ITvGim8FhRiYe4IQ5uHSkj7pVaPDrCTkNd3yq3cV7iZAcJdHTUMPMEHcqSOy9xZ9qFenQCvi+2wjH9a1nXqHww==
 
 is-weakref@^1.0.1:
   version "1.0.1"

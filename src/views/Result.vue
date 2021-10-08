@@ -23,7 +23,7 @@
       absolute>
       <v-spacer></v-spacer>
       <v-btn class="mr-2" @click="onSearch">검색</v-btn>
-      <v-btn class="mr-2" @click="onMove">이동</v-btn>
+      <v-btn class="mr-2" @click="onMove" :disabled="!isURL">이동</v-btn>
       <v-btn class="mr-2" @click="onCopy">복사</v-btn>
       <v-btn class="mr-2" @click="onShare">공유</v-btn>
       <v-spacer></v-spacer>
@@ -38,7 +38,9 @@
 </template>
 
 <script>
+import isURL from 'is-url';
 import { mapGetters } from 'vuex';
+import { Share } from '@capacitor/share';
 
 export default {
   name: 'Result',
@@ -46,6 +48,9 @@ export default {
     ...mapGetters({
       decodeValue: 'decodeValue',
     }),
+    isURL() {
+      return isURL(this.decodeValue);
+    },
   },
   data: () => ({
     showCopyNotify: false,
@@ -56,6 +61,8 @@ export default {
       handler(value) {
         if (value === '') {
           this.$router.push('/');
+        } else {
+          console.log('isURL:', isURL(value), value);
         }
       },
     },
@@ -77,7 +84,14 @@ export default {
       document.body.removeChild(tempTag);
       this.showCopyNotify = true;
     },
-    onShare() {
+    async onShare() {
+      const key = this.isURL ? 'url' : 'text';
+      const value = this.isURL ? encodeURI(this.decodeValue) : this.decodeValue;
+
+      await Share.share({
+        [key]: value,
+        dialogTitle: '공유',
+      });
     },
   },
 };
