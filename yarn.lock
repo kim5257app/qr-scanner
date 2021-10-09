@@ -988,6 +988,20 @@
     cssnano-preset-default "^4.0.0"
     postcss "^7.0.0"
 
+"@ionic-native/core@^5.36.0":
+  version "5.36.0"
+  resolved "https://registry.yarnpkg.com/@ionic-native/core/-/core-5.36.0.tgz#712c40a530b119b0039e8d16cb577899f50541d4"
+  integrity sha512-lOrkktadlKYbYf1LrDyAtsu1JnQ0oCCdkOU7iHQ8oXnNOkMwobFfD2m62F1CoOr0u9LIkpYnZSPjng8lZbmbNw==
+  dependencies:
+    "@types/cordova" latest
+
+"@ionic-native/flashlight@^5.36.0":
+  version "5.36.0"
+  resolved "https://registry.yarnpkg.com/@ionic-native/flashlight/-/flashlight-5.36.0.tgz#7c555f4d42e769116d3bbb9fdf82e8af81f909cd"
+  integrity sha512-YaCblM1f/I07uOYHQyf2JHfD1WVWCissHv4KfiNOxHsrvxlyhYEdDZVNcL89RO5MP3Y7R2PNM5nqolrzO+xapw==
+  dependencies:
+    "@types/cordova" latest
+
 "@ionic/cli-framework-output@^2.2.1":
   version "2.2.2"
   resolved "https://registry.yarnpkg.com/@ionic/cli-framework-output/-/cli-framework-output-2.2.2.tgz#d03367e2b767a32fa7046c455843555b4971cd4a"
@@ -1120,6 +1134,11 @@
   integrity sha512-cdeYyv4KWoEgpBISTxWvqYsVy444DOqehiF3fM3ne10AmJ62RSyNkUnxMJXHQWRQQX2eR94m5y1IZyDwBjV9FQ==
   dependencies:
     "@types/node" "*"
+
+"@types/cordova@latest":
+  version "0.0.34"
+  resolved "https://registry.yarnpkg.com/@types/cordova/-/cordova-0.0.34.tgz#ea7addf74ecec3d7629827a0c39e2c9addc73d04"
+  integrity sha1-6nrd907Ow9dimCegw54smt3HPQQ=
 
 "@types/express-serve-static-core@*", "@types/express-serve-static-core@^4.17.18":
   version "4.17.24"
@@ -2916,6 +2935,11 @@ copy-webpack-plugin@^5.1.1:
     schema-utils "^1.0.0"
     serialize-javascript "^4.0.0"
     webpack-log "^2.0.0"
+
+cordova-plugin-flashlight@^3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/cordova-plugin-flashlight/-/cordova-plugin-flashlight-3.2.0.tgz#d09a40ce30ad36a9f004050124b6e815281fbbb2"
+  integrity sha1-0JpAzjCtNqnwBAUBJLboFSgfu7I=
 
 core-js-compat@^3.16.0, core-js-compat@^3.16.2, core-js-compat@^3.6.5:
   version "3.18.2"

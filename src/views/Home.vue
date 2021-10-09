@@ -3,7 +3,6 @@
     <div
       class="cam-container">
       <qrcode-stream
-        :torch="torch"
         @decode="onDecode">
       </qrcode-stream>
     </div>
@@ -29,6 +28,7 @@
 <script>
 import { mapMutations } from 'vuex';
 import { QrcodeStream } from 'vue-qrcode-reader';
+import util from '@/util';
 
 export default {
   name: 'Home',
@@ -38,6 +38,11 @@ export default {
   data: () => ({
     torch: false,
   }),
+  watch: {
+    torch(value) {
+      util.Camera.torch(value);
+    },
+  },
   methods: {
     ...mapMutations({
       decodeValue: 'decodeValue',
