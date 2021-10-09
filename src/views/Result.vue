@@ -67,6 +67,11 @@ export default {
       },
     },
   },
+  mounted() {
+    setTimeout(() => {
+      document.getElementsByTagName('body')[0].click();
+    }, 1000);
+  },
   methods: {
     onSearch() {
       const query = `https://www.google.com/search?q=${encodeURI(this.decodeValue)}`;

@@ -8,8 +8,10 @@ import android.widget.Toast;
 
 import com.getcapacitor.BridgeActivity;
 
-public class MainActivity extends BridgeActivity {
+import java.net.URI;
+import java.net.URISyntaxException;
 
+public class MainActivity extends BridgeActivity {
     private final String TAG = "MainActivity";
 
     private long backPressedTime = 0;
@@ -27,11 +29,19 @@ public class MainActivity extends BridgeActivity {
             Log.d(TAG, "canGoBack:" + webView.canGoBack());
             Log.d(TAG, "url:" + webView.getUrl());
 
-            if (webView.canGoBack()) {
-                webView.goBack();
-            } else {
-                webView.goBack();
-                onBackPressed();
+            try {
+                URI uri = new URI(webView.getUrl());
+                Log.d(TAG, "path:" + uri.getPath());
+
+                if (webView.canGoBack()) {
+                    webView.goBack();
+                } else if (!uri.getPath().equals("")) {
+                    webView.evaluateJavascript("history.back()", null);
+                } else {
+                    onBackPressed();
+                }
+            } catch (URISyntaxException e) {
+                e.printStackTrace();
             }
             return true;
         } else {
