@@ -35,7 +35,7 @@ public class MainActivity extends BridgeActivity {
 
                 if (webView.canGoBack()) {
                     webView.goBack();
-                } else if (!uri.getPath().equals("")) {
+                } else if (!uri.getPath().equals("/")) {
                     webView.evaluateJavascript("history.back()", null);
                 } else {
                     onBackPressed();
