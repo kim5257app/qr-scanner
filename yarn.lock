@@ -903,6 +903,13 @@
     "@babel/helper-validator-identifier" "^7.14.9"
     to-fast-properties "^2.0.0"
 
+"@capacitor-community/admob@^3.2.0":
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/@capacitor-community/admob/-/admob-3.2.0.tgz#49533f8340b144faf5f4a04dbe933190d67792c5"
+  integrity sha512-g5mUCl4UyTVOoxqzLBdAy3BHou2Sm8GJBU3rgI9x5nESdVfcpeBgveBHOjCA9O8ATTeSFWSZIlXbNTTzlwI3YA==
+  dependencies:
+    "@capacitor/core" "^3.0.0"
+
 "@capacitor/android@^3.2.4":
   version "3.2.4"
   resolved "https://registry.yarnpkg.com/@capacitor/android/-/android-3.2.4.tgz#4d65f6db0fb10472d20367a310cfe39d60f1001b"
@@ -935,7 +942,7 @@
     tslib "^2.1.0"
     xml2js "^0.4.23"
 
-"@capacitor/core@^3.2.4":
+"@capacitor/core@^3.0.0", "@capacitor/core@^3.2.4":
   version "3.2.4"
   resolved "https://registry.yarnpkg.com/@capacitor/core/-/core-3.2.4.tgz#8da5774f6237ccaa770b81caff3cffbecbf7e1e8"
   integrity sha512-TAo9u2XPN8IH3xqTjOfsUT8PYIC2vwimKIJoff/knZs19WnGATklfcWnXpxUecfm2VFMCggd80FRPgjPOS75Ag==

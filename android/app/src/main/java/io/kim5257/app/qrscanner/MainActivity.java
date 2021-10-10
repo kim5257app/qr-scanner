@@ -19,12 +19,13 @@ public class MainActivity extends BridgeActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        registerPlugin(com.getcapacitor.community.admob.AdMob.class);
     }
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_BACK) {
-            WebView webView = (WebView) findViewById(R.id.webview);
+            WebView webView = findViewById(R.id.webview);
 
             Log.d(TAG, "canGoBack:" + webView.canGoBack());
             Log.d(TAG, "url:" + webView.getUrl());

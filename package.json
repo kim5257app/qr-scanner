@@ -8,6 +8,7 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@capacitor-community/admob": "^3.2.0",
     "@capacitor/android": "^3.2.4",
     "@capacitor/app": "^1.0.3",
     "@capacitor/cli": "^3.2.4",
