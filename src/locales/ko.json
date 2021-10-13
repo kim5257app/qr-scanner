@@ -1,0 +1,12 @@
+{
+  "common": {
+    "result": "결과",
+    "search": "검색",
+    "move": "이동",
+    "copy": "복사",
+    "share": "공유"
+  },
+  "message": {
+    "copy_it": "복사되었습니다."
+  }
+}

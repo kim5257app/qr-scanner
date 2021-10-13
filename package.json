@@ -13,6 +13,7 @@
     "@capacitor/app": "^1.0.3",
     "@capacitor/cli": "^3.2.4",
     "@capacitor/core": "^3.2.4",
+    "@capacitor/device": "^1.0.3",
     "@capacitor/share": "^1.0.4",
     "@ionic-native/core": "^5.36.0",
     "@ionic-native/flashlight": "^5.36.0",
@@ -20,12 +21,14 @@
     "core-js": "^3.6.5",
     "is-url": "^1.2.4",
     "vue": "^2.6.11",
+    "vue-i18n": "^8.26.1",
     "vue-qrcode-reader": "^3.0.3",
     "vue-router": "^3.2.0",
     "vuetify": "^2.4.0",
     "vuex": "^3.4.0"
   },
   "devDependencies": {
+    "@intlify/vue-i18n-loader": "^3.2.0",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
     "@vue/cli-plugin-router": "~4.5.0",

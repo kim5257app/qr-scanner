@@ -1,0 +1,12 @@
+{
+  "common": {
+    "result": "Result",
+    "search": "Search",
+    "move": "Move",
+    "copy": "Copy",
+    "share": "Share"
+  },
+  "message": {
+    "copy_it": "Copy it."
+  }
+}

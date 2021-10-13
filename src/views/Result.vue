@@ -12,7 +12,7 @@
           </v-icon>
         </v-btn>
         <span>
-          결과
+          {{ $t('common.result') }}
         </span>
       </v-card-title>
       <v-card-text>
@@ -22,17 +22,17 @@
     <v-footer
       absolute>
       <v-spacer></v-spacer>
-      <v-btn class="mr-2" @click="onSearch">검색</v-btn>
-      <v-btn class="mr-2" @click="onMove" :disabled="!isURL">이동</v-btn>
-      <v-btn class="mr-2" @click="onCopy">복사</v-btn>
-      <v-btn class="mr-2" @click="onShare">공유</v-btn>
+      <v-btn class="mr-2" @click="onSearch">{{ $t('common.search') }}</v-btn>
+      <v-btn class="mr-2" @click="onMove" :disabled="!isURL">{{ $t('common.move') }}</v-btn>
+      <v-btn class="mr-2" @click="onCopy">{{ $t('common.copy') }}</v-btn>
+      <v-btn class="mr-2" @click="onShare">{{ $t('common.share') }}</v-btn>
       <v-spacer></v-spacer>
     </v-footer>
     <v-snackbar
       top
       v-model="showCopyNotify"
       :timeout="3000">
-      복사되었습니다.
+      {{ $t('message.copy_it') }}
     </v-snackbar>
   </v-container>
 </template>
