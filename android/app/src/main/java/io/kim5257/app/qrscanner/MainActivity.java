@@ -19,7 +19,15 @@ public class MainActivity extends BridgeActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        registerPlugin(EventPlugin.class);
         registerPlugin(com.getcapacitor.community.admob.AdMob.class);
+    }
+
+    @Override
+    public void onWindowFocusChanged(boolean hasFocus) {
+        super.onWindowFocusChanged(hasFocus);
+
+        ((EventPlugin)getBridge().getPlugin("Event").getInstance()).onFocusChanged(hasFocus);
     }
 
     @Override

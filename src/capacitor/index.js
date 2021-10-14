@@ -1,8 +1,11 @@
+import { registerPlugin } from '@capacitor/core';
 import { App } from '@capacitor/app';
 import { Device } from '@capacitor/device';
+import { Camera } from '@capacitor/camera';
 import store from '@/store';
 
-App.addListener('appStateChange', (state) => {
+App.addListener('appStateChange', async (state) => {
+  await Camera.requestPermissions();
   store.commit('pause', !state.isActive);
 });
 
@@ -19,3 +22,13 @@ App.addListener('backButton', (event) => {
 (async () => {
   console.log('language:', await Device.getLanguageCode());
 })();
+
+const eventPlugin = registerPlugin('Event');
+
+eventPlugin.addListener('focusChanged', async (hasFocus) => {
+  if (hasFocus) {
+    await Camera.requestPermissions();
+  }
+});
+
+export default eventPlugin;
