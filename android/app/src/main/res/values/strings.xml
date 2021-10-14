@@ -1,8 +1,9 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    <string name="app_name">QR Scanner</string>
-    <string name="title_activity_main">QR Scanner</string>
-    <string name="package_name">io.kim5257.app.qrscanner</string>
-    <string name="custom_url_scheme">io.kim5257.app.qrscanner</string>
-    <string name="admob_app_id">ca-app-pub-5194192385820634~4909842131</string>
+    <string name="app_name">QR 스캐너</string>
+    <string name="title_activity_main" translatable="false">QR Scanner</string>
+    <string name="package_name" translatable="false">io.kim5257.app.qrscanner</string>
+    <string name="custom_url_scheme" translatable="false">io.kim5257.app.qrscanner</string>
+    <string name="admob_app_id" translatable="false">ca-app-pub-5194192385820634~4909842131</string>
+    <string name="exit_guide">한 번 더 누르면 종료합니다.</string>
 </resources>

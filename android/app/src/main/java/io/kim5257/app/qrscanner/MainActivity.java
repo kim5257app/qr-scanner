@@ -59,7 +59,7 @@ public class MainActivity extends BridgeActivity {
             finish();
         } else {
             backPressedTime = curTime;
-            Toast.makeText(this, "한 번 더 누르면 종료합니다.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.exit_guide), Toast.LENGTH_SHORT).show();
         }
     }
 }
