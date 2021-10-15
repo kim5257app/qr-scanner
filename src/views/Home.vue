@@ -77,6 +77,7 @@ export default {
   max-width: 800px;
   width: 100%;
   height: 100vh;
+  background-color: #000000;
 }
 
 .control-container {

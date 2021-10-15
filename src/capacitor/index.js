@@ -5,7 +5,7 @@ import { Camera } from '@capacitor/camera';
 import store from '@/store';
 
 App.addListener('appStateChange', async (state) => {
-  await Camera.requestPermissions();
+  await Camera.requestPermissions({ permissions: ['camera'] });
   store.commit('pause', !state.isActive);
 });
 
@@ -27,7 +27,7 @@ const eventPlugin = registerPlugin('Event');
 
 eventPlugin.addListener('focusChanged', async (hasFocus) => {
   if (hasFocus) {
-    await Camera.requestPermissions();
+    await Camera.requestPermissions({ permissions: ['camera'] });
   }
 });
 
