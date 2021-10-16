@@ -13,3 +13,4 @@ module.exports = {
       .loader('@intlify/vue-i18n-loader');
   },
 };
+
