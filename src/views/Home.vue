@@ -40,6 +40,7 @@
 import { mapGetters, mapMutations } from 'vuex';
 import { QrcodeStream } from 'vue-qrcode-reader';
 import util from '@/util';
+import admob from '@/capacitor/admob';
 
 export default {
   name: 'Home',
@@ -58,6 +59,12 @@ export default {
     torch(value) {
       util.Camera.torch(value);
     },
+  },
+  async mounted() {
+    await admob.resumeBanner();
+  },
+  async beforeDestroy() {
+    await admob.hideBanner();
   },
   methods: {
     ...mapMutations({

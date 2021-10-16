@@ -7,6 +7,7 @@
 </template>
 
 <script>
+import admob from '@/capacitor/admob';
 
 export default {
   name: 'App',
@@ -14,5 +15,9 @@ export default {
   data: () => ({
     //
   }),
+  async mounted() {
+    await admob.initialize();
+    await admob.showBanner();
+  },
 };
 </script>
