@@ -12,7 +12,7 @@ export default {
       testingDevices: [
         'f83022bc-27ad-471d-84a0-a480ec5a8ac3',
       ],
-      initializeForTesting: true,
+      initializeForTesting: false,
     });
   },
   async showBanner() {
@@ -30,7 +30,7 @@ export default {
       adSize: BannerAdSize.BANNER,
       position: BannerAdPosition.BOTTOM_CENTER,
       margin: 0,
-      isTesting: true,
+      isTesting: false,
       // npa: true
     };
     await AdMob.showBanner(options);
