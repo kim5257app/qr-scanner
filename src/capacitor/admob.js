@@ -5,6 +5,8 @@ import {
   BannerAdPosition,
 } from '@capacitor-community/admob';
 
+import store from '@/store';
+
 export default {
   async initialize() {
     await AdMob.initialize({
@@ -23,6 +25,7 @@ export default {
     AdMob.addListener(BannerAdPluginEvents.SizeChanged, (size) => {
       // Subscribe Change Banner Size
       console.log('AdMob Size changed:', size);
+      store.commit('adSize', size);
     });
 
     const options = {
@@ -30,10 +33,13 @@ export default {
       adSize: BannerAdSize.BANNER,
       position: BannerAdPosition.BOTTOM_CENTER,
       margin: 0,
-      isTesting: false,
+      isTesting: true,
       // npa: true
     };
     await AdMob.showBanner(options);
+  },
+  async removeBanner() {
+    await AdMob.removeBanner();
   },
   async hideBanner() {
     await AdMob.hideBanner();
@@ -42,4 +48,3 @@ export default {
     await AdMob.resumeBanner();
   },
 };
-

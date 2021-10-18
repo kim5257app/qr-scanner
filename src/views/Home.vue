@@ -1,7 +1,8 @@
 <template>
   <div>
     <div
-      class="cam-container">
+      class="cam-container"
+      :style="camContainerStyle">
       <qrcode-stream
         v-if="!pause"
         @decode="onDecode">
@@ -53,7 +54,13 @@ export default {
   computed: {
     ...mapGetters({
       pause: 'pause',
+      adSize: 'adSize',
     }),
+    camContainerStyle() {
+      return {
+        height: `calc(100vh - ${this.adSize.height}px`,
+      };
+    },
   },
   watch: {
     torch(value) {
@@ -83,7 +90,6 @@ export default {
   margin: auto;
   max-width: 800px;
   width: 100%;
-  height: 100vh;
   background-color: #000000;
 }
 
