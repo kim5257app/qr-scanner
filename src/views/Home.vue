@@ -58,7 +58,7 @@ export default {
     }),
     camContainerStyle() {
       return {
-        height: `calc(100vh - ${this.adSize.height}px`,
+        height: `calc(100vh - ${this.adSize.height + 1}px`,
       };
     },
   },

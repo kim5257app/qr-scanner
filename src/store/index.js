@@ -8,7 +8,7 @@ export default new Vuex.Store({
     pause: false,
     decodeValue: '',
     adSize: {
-      height: 0,
+      height: 50,
       width: 0,
     },
   },
